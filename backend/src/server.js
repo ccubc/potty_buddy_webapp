@@ -42,6 +42,11 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
+// Test endpoint
+app.get('/test', (req, res) => {
+  res.json({ message: 'Backend is working!', routes: ['/api/users', '/api/events'] });
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
