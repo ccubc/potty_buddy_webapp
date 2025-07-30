@@ -17,7 +17,7 @@ app.use(helmet());
 // CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? true  // Allow all origins in production for now
+    ? ['https://potty-buddy-webapp.vercel.app', 'https://potty-buddy-webapp-git-main-ccubc.vercel.app']
     : (process.env.FRONTEND_URL || 'http://localhost:3000'),
   credentials: true
 }));
