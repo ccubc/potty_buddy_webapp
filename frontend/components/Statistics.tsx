@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { apiClient, Statistics } from '../lib/api';
+import { apiClient, Statistics as StatisticsData } from '../lib/api';
 
 interface StatisticsProps {
   userId: number;
 }
 
 export default function Statistics({ userId }: StatisticsProps) {
-  const [statistics, setStatistics] = useState<Statistics | null>(null);
+  const [statistics, setStatistics] = useState<StatisticsData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
